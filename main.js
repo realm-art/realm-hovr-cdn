@@ -17,10 +17,10 @@ function airtableSubmit() {
     document.getElementById('record-id').value = record.getId();
     
     var record = document.getElementById('record-id').value;
-
+    
     document.getElementById('continue-button').style.cssText = "display: inline-block";
-    document.getElementById('continue-button').setAttribute("href", '/enter-email-now?address=' +walletAddress +'&recordID='+record)
-    window.location.href = '/enter-email-now?address=' +walletAddress +'&recordID='+record
+    document.getElementById('continue-button').setAttribute("href", '/enter-email-now?address=' + ethereum.selectedAddress + '&recordID=' + record);
+    window.location.href = '/enter-email-now?address=' + ethereum.selectedAddress +'&recordID=' + record;
     console.log(record.getId());
   });
 }
